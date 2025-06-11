@@ -13,4 +13,17 @@ export default defineNuxtConfig({
   },
 
   modules: ['@pinia/nuxt'],
+  app: {
+    head: {
+      title: 'Ciencias de la Educación',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Sitio oficial de la Carrera de Ciencias de la Educación' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
+  }
 })
