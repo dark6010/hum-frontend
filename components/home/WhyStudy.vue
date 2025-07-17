@@ -14,19 +14,19 @@
           <div 
             v-for="(point, index) in points" 
             :key="index" 
-            class="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/20 hover:bg-white/10 transition" <!-- Efecto hover -->
+            class="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/20 hover:bg-white/10 transition" 
           >
-            <div class="text-blue-50 mb-4"> <!-- Icono más claro -->
-              <svg class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-white"> <!-- Título blanco sólido -->
-              {{ point.title }}
-            </h3>
-            <p class="text-blue-50 leading-relaxed"> <!-- Texto claro con mejor interlineado -->
-              {{ point.description }}
-            </p>
+            <a :href="point.link" target="_blank">
+              <div class="text-blue-50 mb-4"> <!-- Icono más claro -->
+                <img :src="point.image" alt="">
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-white"> <!-- Título blanco sólido -->
+                {{ point.title }}
+              </h3>
+              <p class="text-blue-50 leading-relaxed"> <!-- Texto claro con mejor interlineado -->
+                {{ point.description }}
+              </p>
+            </a>
           </div>
         </div>
         

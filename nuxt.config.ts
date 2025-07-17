@@ -4,7 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: ['@fortawesome/fontawesome-svg-core/styles.css','~/assets/css/main.css'],
+  
 
   vite: {
     plugins: [
@@ -12,6 +13,24 @@ export default defineNuxtConfig({
     ],
   },
 
+  nitro: {
+    devProxy: {
+      '/api': {
+        // target: 'https://api.tudominio.com'
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        cookieDomainRewrite: {
+          // Reescribe el dominio de las cookies para desarrollo local
+          '*': 'localhost',
+          // 'api.tudominio.com': 'tudominio.com'
+        },
+        headers: {
+          // Necesario para que las cookies se envíen correctamente
+          Connection: 'keep-alive'
+        }
+      }
+    }
+  },
   modules: ['@pinia/nuxt'],
   app: {
     head: {

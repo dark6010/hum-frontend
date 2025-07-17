@@ -1,19 +1,19 @@
 <template>
-    <section class="py-12 bg-gray-50">
+    <section class="py-12 bg-gray-50 w-100% overflow-x-hidden">
       <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid md:grid-cols-1 gap-8 px-4 md:px-8 lg:px-12">
           <!-- Últimas noticias -->
           <div>
             <div class="flex justify-between items-center mb-6">
               <h2 class="text-2xl font-bold text-blue-800">Últimas noticias</h2>
-              <NuxtLink to="/noticias" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+              <!-- <NuxtLink to="/noticias" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
                 Ver todas →
-              </NuxtLink>
+              </NuxtLink> -->
             </div>
             
             <div class="space-y-6">
-              <div v-for="item in news" :key="item.id" class="bg-white rounded-lg shadow overflow-hidden">
-                <img v-if="item.images" :src="'http://localhost:3001/images/'+item.images[0]" :alt="item.title" class="w-full h-48 object-cover">
+              <div v-for="item in news" :key="item.id" class="bg-white rounded-lg shadow overflow-hidden px-12 md:px-24 lg:px-36" >
+                <img v-if="item.images" :src="'http://localhost:3001/images/'+item.images[0]" :alt="item.title" class="w-full h-100 object-cover">
                 <div class="p-6">
                   <div class="flex items-center text-sm text-gray-500 mb-2">
                     <span>{{ formatDate(item.createdAt) }}</span>
@@ -22,9 +22,9 @@
                   </div>
                   <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ item.title }}</h3>
                   <p class="text-gray-600 mb-4">{{ item.excerpt }}</p>
-                  <NuxtLink :to="`/noticias/${item._id}`" class="text-blue-600 hover:text-blue-800 font-medium">
+                  <!-- <NuxtLink :to="`/noticias/${item._id}`" class="text-blue-600 hover:text-blue-800 font-medium">
                     Leer más
-                  </NuxtLink>
+                  </NuxtLink> -->
                 </div>
               </div>
               
@@ -35,7 +35,7 @@
           </div>
           
           <!-- Próximos eventos -->
-          <div>
+          <!-- <div>
             <div class="flex justify-between items-center mb-6">
               <h2 class="text-2xl font-bold text-blue-800">Próximos eventos</h2>
               <NuxtLink to="/eventos" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
@@ -79,7 +79,7 @@
                 No hay eventos próximos programados.
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

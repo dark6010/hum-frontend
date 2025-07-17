@@ -3,7 +3,7 @@
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
           <div class="text-2xl font-bold">
-            <NuxtLink to="/">Ciencias de la Educación</NuxtLink>
+            <NuxtLink to="/">{{Title}}</NuxtLink>
           </div>
           
           <div class="hidden md:flex space-x-6">
@@ -46,13 +46,18 @@
   </template>
   
   <script setup>
+  import {Title} from '~/configs/navbar.js'
+  const title = ref(Title);
   const isOpen = ref(false);
-  
+  const route = useRoute();
+  onMounted(() => {
+    console.log('Ruta actual (cliente):', route.path);
+  });
   const navLinks = [
     { path: '/', label: 'Inicio' },
     { path: '/la-carrera', label: 'La Carrera' },
     { path: '/dependencias', label: 'Dependencias' },
-    { path: '/academia', label: 'Academia' },
+    // { path: '/academia', label: 'Academia' },
     { path: '/salidas-laterales', label: 'Salidas Laterales' },
     { path: '/vida-estudiantil', label: 'Vida Estudiantil' },
     { path: '/contacto', label: 'Contacto' }

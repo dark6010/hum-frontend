@@ -3,8 +3,8 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 class="text-xl font-bold mb-4">Ciencias de la Educación</h3>
-            <p class="text-gray-300">Formando profesionales en educación con excelencia académica y compromiso social.</p>
+            <h3 class="text-xl font-bold mb-4">{{ titulo1 }}</h3>
+            <p class="text-gray-300">{{ contenido1 }}</p>
           </div>
           
           <div>
@@ -19,26 +19,34 @@
           </div>
           
           <div>
-            <h3 class="text-xl font-bold mb-4">Contacto</h3>
-            <p class="text-gray-300">Dirección: Av. Universitaria 123</p>
-            <p class="text-gray-300">Teléfono: +591 4 1234567</p>
-            <p class="text-gray-300">Email: educacion@universidad.edu</p>
+            <h3 class="text-xl font-bold mb-4">{{ titulo3 }}</h3>
+            <p class="text-gray-300">{{ contenido3.p1 }}</p>
+            <p class="text-gray-300">{{ contenido3.p2 }}</p>
+            <p class="text-gray-300">{{ contenido3.p3 }}</p>
           </div>
         </div>
         
         <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-          <p>&copy; {{ new Date().getFullYear() }} Carrera de Ciencias de la Educación. Todos los derechos reservados.</p>
+          <p>{{ copyright }}</p>
         </div>
       </div>
     </footer>
   </template>
   
   <script setup>
+  import {zona1,zona3, copyright as Copyright} from '~/configs/footer.js'
+  const titulo1= ref(zona1.titulo)
+  const contenido1= ref(zona1.contenido)
+  const titulo3= ref(zona3.titulo)
+  const contenido3= ref(zona3.contenido)
+  const copyright= Copyright
   const quickLinks = [
     { path: '/la-carrera', label: 'Malla curricular' },
-    { path: '/academia/docentes', label: 'Docentes' },
-    { path: '/academia/materias', label: 'Materias' },
-    { path: '/vida-estudiantil', label: 'Vida estudiantil' },
-    { path: '/contacto', label: 'Contáctanos' }
+    // { path: '/academia/docentes', label: 'Docentes' },
+    // { path: '/academia/materias', label: 'Materias' },
+    // { path: '/vida-estudiantil', label: 'Vida estudiantil' },
+    // { path: '/contacto', label: 'Contáctanos' }
   ];
   </script>
+<style scoped>
+</style>

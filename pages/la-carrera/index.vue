@@ -1,15 +1,16 @@
 <template>
   <div>
-    <Head>
-      <title>Inicio - Ciencias de la Educación</title>
-      <meta name="description" content="Página principal de la Carrera de Ciencias de la Educación">
-    </Head>
-
-    
-    
     <!-- Mensaje de bienvenida -->
+    <Presentation />
+    <hr>
+    <CurriculumMap />
+    <hr>
+    <DegreeRequirements />
+    <hr>
+    <GraduateProfile />
+    <hr>
     <WelcomeMessage :content="welcomeContent" />
- 
+    
     <!-- ¿Por qué estudiar Ciencias de la Educación? -->
     <!-- <WhyStudy :points="studyPoints" /> -->
   </div>
@@ -18,10 +19,11 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useGlobalStore } from '~/store/useGlobalStore';
-import Banner from '@/components/home/Banner.vue'
+import Presentation from '@/components/home/Presentation.vue'
+import CurriculumMap from '@/components/home/CurriculumMap.vue'
+import DegreeRequirements from '@/components/home/DegreeRequirements.vue'
+import GraduateProfile from '@/components/home/GraduateProfile.vue'
 import WelcomeMessage from '@/components/home/WelcomeMessage.vue'
-import NewsEvents from '@/components/home/NewsEvents.vue'
-import WhyStudy from '@/components/home/WhyStudy.vue'
 
 const store = useGlobalStore();
 
@@ -65,7 +67,7 @@ const welcomeContent = ref({
 const studyPoints = ref([
   {
     title: 'Amplio campo laboral',
-    description: 'Oportunidades en instituciones educativas, ONGs, empresas y organismos internacionales.'
+    description: 'Oportunidades en instituciones educativas, ONGs, empresas y organismos internacionales, universidades locales.'
   },
   {
     title: 'Impacto social',
@@ -76,7 +78,7 @@ const studyPoints = ref([
     description: 'Adquiere conocimientos pedagógicos, psicológicos, sociológicos y tecnológicos.'
   },
   {
-    title: 'Investigación educativa',
+    title: 'Investigación educativa al maximo',
     description: 'Participa en proyectos que generan conocimiento para mejorar los procesos de enseñanza.'
   }
 ]);
@@ -129,10 +131,10 @@ const fetchData = async () => {
     }
     
     // Cargar eventos
-    const eventsResponse = await fetch('/api/events?limit=3');
-    if (eventsResponse.ok) {
-      upcomingEvents.value = await eventsResponse.json();
-    }
+    // const eventsResponse = await fetch('/api/events?limit=3');
+    // if (eventsResponse.ok) {
+    //   upcomingEvents.value = await eventsResponse.json();
+    // }
     
     // Actualizar estado de carga
     store.setLoading(false);
@@ -143,7 +145,22 @@ const fetchData = async () => {
 };
 
 onMounted(() => {
-  store.setLoading(true);
-  fetchData();
+  // store.setLoading(true);
+  //fetchData();
 });
+useHead({
+  title: 'La carrera',
+  meta: [
+    { 
+      name: 'description', 
+      content: 'Página principal de la Carrera de Ciencias de la Educación' 
+    },
+    // Puedes agregar más meta tags aquí
+    { name: 'og:title', content: 'Carrera de Ciencias de la Educación' },
+    { name: 'og:image', content: '/Banner/banner1.jpg' }
+  ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+  ]
+})
 </script>

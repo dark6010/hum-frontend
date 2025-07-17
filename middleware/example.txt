@@ -1,0 +1,17 @@
+// Página de admin (/pages/admin.vue)
+definePageMeta({
+  middleware: ['auth', 'role'],
+  requiresAuth: true,
+  roles: ['admin'] // Solo accesible para admin
+})
+
+// Página de usuario (/pages/dashboard.vue)
+definePageMeta({
+  middleware: 'auth',
+  requiresAuth: true // Accesible para cualquier usuario logueado
+})
+
+// Página pública (/pages/login.vue)
+definePageMeta({
+  requiresAuth: false
+})
