@@ -158,7 +158,7 @@
 import { ref, computed } from 'vue'
 
 // Configuración de la imagen (reemplaza con tu ruta real)
-const mallaImage = '/CurriculumMap/img2048x1448.png'
+const mallaImage = '/CurriculumMap/malla.jpg'
 
 // Estado del componente
 const activeView = ref('completa') // 'completa' o 'semestral'

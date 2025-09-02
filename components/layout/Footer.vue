@@ -5,7 +5,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 class="text-xl font-bold mb-4">{{ titulo1 }}</h3>
-            <p class="text-gold-medium">{{ contenido1 }}</p>
+            <p class="text-white">{{ contenido1 }}</p>
           </div>
           
           <div>

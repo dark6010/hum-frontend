@@ -1,6 +1,6 @@
 <template>
   <section class="graduation-options py-16 bg-gray-50">
-    <div class="container mx-auto px-4 max-w-6xl">
+    <div class="container mx-auto px-4 max-w-8xl">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-blue-800 mb-3">Modalidades de Titulación</h2>
         <p class="text-gray-600 max-w-3xl mx-auto">
@@ -25,13 +25,13 @@
       </div>
 
       <!-- Modalidades -->
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-1 gap-6">
         <div
           v-for="modalidad in filteredModalidades"
           :key="modalidad.id"
           class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow"
         >
-          <div class="p-6">
+          <div class="py-6 px-24">
             <div class="flex items-start mb-4">
               <div class="bg-blue-100 p-3 rounded-lg mr-4">
                 <Icon :name="modalidad.icon" class="text-blue-600 text-2xl" />
@@ -96,7 +96,7 @@ const modalidades = [
       'Cumplir con normas APA y formato UMSS'
     ],
     tags: ['Investigación', 'Individual', 'Evaluación oral'],
-    tipo: 'investigacion'
+    tipo: 'Tesis de grado'
   },
   {
     id: 2,
@@ -111,7 +111,7 @@ const modalidades = [
       'Cumplir con normas APA y formato UMSS'
     ],
     tags: ['Investigación', 'Individual', 'Evaluación oral'],
-    tipo: 'practica'
+    tipo: 'Proyecto de grado'
   },
   {
     id: 3,
@@ -126,7 +126,7 @@ const modalidades = [
       'Sustentación pública de resultados'
     ],
     tags: ['Práctica', 'Campo educativo', 'Aplicación'],
-    tipo: 'practica'
+    tipo: 'Trabajo dirigido'
   },
   {
     id: 4,
@@ -141,7 +141,7 @@ const modalidades = [
       'Sustentación pública de resultados'
     ],
     tags: ['Práctica', 'Campo educativo', 'Aplicación'],
-    tipo: 'practica'
+    tipo: 'Adscripción'
   },
   {
     id: 5,
@@ -156,7 +156,7 @@ const modalidades = [
       'Portafolio de evidencias académicas'
     ],
     tags: ['Conocimientos', 'Individual', 'Evaluación escrita/oral'],
-    tipo: 'evaluacion'
+    tipo: 'Examen de grado'
   },
   {
     id: 6,
@@ -171,7 +171,7 @@ const modalidades = [
       'Aprobar examen de suficiencia'
     ],
     tags: ['Mérito', 'Alto rendimiento', 'Automático'],
-    tipo: 'practica'
+    tipo: 'Internado'
   },
   {
     id: 7,
@@ -186,7 +186,7 @@ const modalidades = [
       'Aprobar examen de suficiencia'
     ],
     tags: ['Mérito', 'Alto rendimiento', 'Automático'],
-    tipo: 'investigacion'
+    tipo: 'Excelencia académica'
   },
   {
     id: 8,
@@ -201,20 +201,20 @@ const modalidades = [
       'Aprobar examen de suficiencia'
     ],
     tags: ['Mérito', 'Alto rendimiento', 'Automático'],
-    tipo: 'investigacion'
+    tipo: 'Diplomado'
   }
 ]
 
 const filters = [
   { value: 'todas', label: 'Todas' },
-  { value: 'investigacion', label: 'Tesis de grado' },
-  { value: 'evaluacion', label: 'Proyecto de grado' },
-  { value: 'practica', label: 'Trabajo dirigido' },
-  { value: 'especial', label: 'Adscripción' },
-  { value: 'evaluacion', label: 'Examen de grado' },
-  { value: 'practica', label: 'Internado' },
-  { value: 'buenas notas', label: 'Excelencia académica' },
-  { value: 'capacitacion', label: 'Diplomado' },
+  { value: 'Tesis de grado', label: 'Tesis de grado' },
+  { value: 'Proyecto de grado', label: 'Proyecto de grado' },
+  { value: 'Trabajo dirigido', label: 'Trabajo dirigido' },
+  { value: 'Adscripción', label: 'Adscripción' },
+  { value: 'Examen de grado', label: 'Examen de grado' },
+  { value: 'Internado', label: 'Internado' },
+  { value: 'Excelencia académica', label: 'Excelencia académica' },
+  { value: 'Diplomado', label: 'Diplomado' },
 ]
 
 const activeFilter = ref('todas')

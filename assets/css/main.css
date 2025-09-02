@@ -5,8 +5,14 @@
 .bg-navy-dark {
   background-color: rgb(26, 31, 49);
 }
+.bg-navy-light {
+  background-color: rgb(38, 49, 74);
+}
 .text-gold-light {
   color: rgb(255, 235, 150);
+}
+.text-blue {
+  color: rgb(34, 41, 65);
 }
 .text-gold-medium {
   color: rgb(212, 169, 78);

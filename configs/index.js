@@ -2,9 +2,9 @@
 export const BannerSlides = [
   {
     id: 1,
-    image: '/Banner/banner1.jpg',
-    title: 'Excelencia en Educación de la umss',
-    subtitle: 'Formando profesionales comprometidos con la transformación educativa'
+    image: '/Banner/banner1.jpeg',
+    title: '',
+    subtitle: ''
   },
   {
     id: 2,

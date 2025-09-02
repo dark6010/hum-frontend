@@ -1,7 +1,7 @@
 <template>
   <section class="institutional-info bg-gray-50 py-12">
     <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">
+      <h2 class="text-3xl font-bold text-center text-blue mb-12">
         La Carrera
       </h2>
 
@@ -14,7 +14,7 @@
           class="px-4 py-2 rounded-lg transition-all"
           :class="{
             'bg-navy-custom text-gold-light': activeTab === tab.id,
-            'bg-white text-blue-800 hover:bg-blue-100': activeTab !== tab.id
+            'bg-white text-blue hover:bg-blue-100': activeTab !== tab.id
           }"
           :aria-current="activeTab === tab.id ? 'page' : null"
         >
@@ -27,7 +27,7 @@
         <div class="p-6 md:p-8 lg:p-10">
           <!-- Misión -->
           <div v-show="activeTab === 'mision'" class="fade-in">
-            <h3 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+            <h3 class="text-2xl font-semibold text-blue mb-4 flex items-center">
               <Icon name="material-symbols:mission" class="mr-2" />
               Misión
             </h3>
@@ -38,7 +38,7 @@
 
           <!-- Visión -->
           <div v-show="activeTab === 'vision'" class="fade-in">
-            <h3 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+            <h3 class="text-2xl font-semibold text-blue mb-4 flex items-center">
               <Icon name="mdi:eye" class="mr-2" />
               Visión
             </h3>
@@ -49,7 +49,7 @@
 
           <!-- Objetivos -->
           <div v-show="activeTab === 'objetivos'" class="fade-in">
-            <h3 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+            <h3 class="text-2xl font-semibold text-blue mb-4 flex items-center">
               <Icon name="mdi:target" class="mr-2" />
               Objetivos
             </h3>
@@ -67,7 +67,7 @@
 
           <!-- Historial -->
           <div v-show="activeTab === 'historial'" class="fade-in">
-            <h3 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+            <h3 class="text-2xl font-semibold text-blue mb-4 flex items-center">
               <Icon name="mdi:history" class="mr-2" />
               Reseña Histórica
             </h3>

@@ -1,5 +1,5 @@
 <template>
-    <section class="py-12 bg-blue-900 text-white"> <!-- Cambiado a bg-blue-900 para mayor contraste -->
+    <section class="py-12 bg-navy-light text-white"> <!-- Cambiado a bg-blue-900 para mayor contraste -->
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white"> <!-- Texto blanco sólido -->

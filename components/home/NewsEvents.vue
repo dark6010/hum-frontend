@@ -5,7 +5,7 @@
           <!-- Últimas noticias -->
           <div>
             <div class="flex justify-between items-center mb-6">
-              <h2 class="text-2xl font-bold text-blue-800">Últimas noticias</h2>
+              <h2 class="text-2xl font-bold text-blue">Últimas noticias</h2>
               <!-- <NuxtLink to="/noticias" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
                 Ver todas →
               </NuxtLink> -->

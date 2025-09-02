@@ -7,7 +7,7 @@
       <div class="flex justify-between items-center py-4">
         <div class="text-2xl font-bold">
           <NuxtLink to="/" class="group relative">
-            <span class="relative z-10 text-gold-medium">{{ Title }}</span>
+            <span class="relative z-10 text-gold-light">{{ Title }}</span>
             <span class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-gold-light to-gold-medium transition-all duration-300 group-hover:w-full"></span>
           </NuxtLink>
         </div>
