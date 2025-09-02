@@ -64,6 +64,9 @@ const email = ref('')
 const password = ref('')
 const loading = ref(false)
 const error = ref('')
+definePageMeta({
+  middleware: 'auth'
+})
 
 const { login } = useAuth()
 const router = useRouter()

@@ -47,7 +47,20 @@
             <div class="md:w-2/3">
               <h3 class="text-xl font-semibold text-blue-800 mb-4">¿Qué es la SOCEED?</h3>
               <p class="text-gray-700 mb-4">
-                La Sociedad Científica de Estudiantes de Educación (SOCEED) es un espacio autogestionado por estudiantes para fomentar la investigación, el debate académico y la producción científica en el campo educativo.
+                La Sociedad Científica de Estudiantes de Ciencias de la Educación de la Universidad Mayor de San Simón es una institución que desarrolla actividades de carácter científico e investigativo a beneficio de los estudiantes y la comunidad como aporte a las ciencias sociales y tiene como fin incentivar y desarrollar en los estudiantes, la actividad científica e investigativa, así como toda actividad que fomente el desarrollo del conocimiento en las Ciencias de la Educación, teniendo como sede un ambiente dentro de la Facultad de Humanidades y Ciencias de laEducación.
+                <br>
+                <b>Misión:</b>
+                <br>
+                Planificar, ejecutar y difundir hechos investigativos y actividades; en el marco de la producción
+                y recreación de conocimiento científico, contribuyendo a la formación del Estudiante de la
+                Carrera de Ciencias de la Educación, logrando que sea crítico, reflexivo, analítico y propositivo.
+                <br>
+                <b>Visión</b>
+                <br>
+                Ser una institución líder de cambio y transformación de las estructuras internas y externas del
+                sistema educativo, en función del dialogo franco e interacción permanente con las instituciones
+                del medio educativo, para contribuir al desarrollo de la investigación institucional y académica
+                de la UMSS y la sociedad en su conjunto.
               </p>
               
               <div class="grid md:grid-cols-2 gap-6">

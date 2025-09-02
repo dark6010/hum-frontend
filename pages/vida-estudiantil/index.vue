@@ -2,7 +2,6 @@
   <div>
     <!-- Mensaje de bienvenida -->
     <StudentLife />
-    
   </div>
 </template>
 

@@ -11,4 +11,7 @@
 import { ref, onMounted } from 'vue';
 import { useGlobalStore } from '~/store/useGlobalStore';
 import Dependencies from '@/components/home/Dependencies.vue'
+definePageMeta({
+  middleware: 'auth'
+})
 </script>

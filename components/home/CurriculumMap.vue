@@ -4,7 +4,7 @@
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-blue-800 mb-3">Malla Curricular</h2>
         <p class="text-gray-600 max-w-3xl mx-auto">
-          Estructura académica de la Carrera de Ciencias de la Educación
+          A continuación, se presenta la malla curricular, la misma que permitirá observar gráficamente las Unidades Pedagógicas de Formación, Áreas, Ejes Articuladores, Ciclos, Cursos y la titulación como Técnico Superior, las menciones profesionales, así como los recorridos académicos dispuestos para los estudiantes de Ciencias de la Educación
         </p>
       </div>
 
@@ -17,7 +17,7 @@
             @click="activeView = option.value"
             class="px-4 py-2 rounded-md border transition"
             :class="{
-              'bg-blue-600 text-white border-blue-600': activeView === option.value,
+              'bg-navy-custom text-white border-blue-600': activeView === option.value,
               'bg-white text-gray-700 border-gray-300 hover:bg-gray-50': activeView !== option.value
             }"
           >
@@ -77,7 +77,7 @@
               :key="semester.number"
               class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden"
             >
-              <div class="bg-blue-700 px-4 py-3">
+              <div class="bg-navy-custom px-4 py-3">
                 <h3 class="text-lg font-semibold text-white">
                   Semestre {{ semester.number }}
                 </h3>

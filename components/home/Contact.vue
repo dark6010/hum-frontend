@@ -9,9 +9,10 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <!-- <div class="grid md:grid-cols-2 gap-8"> -->
+      <div class="grid md:grid-cols-1 gap-8">
         <!-- Información de contacto -->
-        <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+        <div class="bg-white rounded-xl shadow-md p-12 md:p-24">
           <h3 class="text-xl font-semibold text-blue-800 mb-6 flex items-center">
             <Icon name="mdi:information" class="mr-2 text-blue-600" />
             Información de Contacto
@@ -101,7 +102,7 @@
             </div>
 
             <!-- Redes sociales -->
-            <div class="flex items-start">
+            <!-- <div class="flex items-start">
               <div class="bg-blue-100 p-3 rounded-lg mr-4">
                 <Icon name="mdi:share-variant" class="text-blue-600 text-xl" />
               </div>
@@ -120,12 +121,12 @@
                   </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
 
         <!-- Formulario de contacto -->
-        <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+        <!-- <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
           <h3 class="text-xl font-semibold text-blue-800 mb-6 flex items-center">
             <Icon name="mdi:email-edit" class="mr-2 text-blue-600" />
             Envíanos un mensaje
@@ -222,7 +223,7 @@
               </button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
 
       <!-- Mapa -->

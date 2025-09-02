@@ -1,1 +1,29 @@
 @import "tailwindcss";
+.bg-navy-custom {
+  background-color: rgb(34, 41, 65);
+}
+.bg-navy-dark {
+  background-color: rgb(26, 31, 49);
+}
+.text-gold-light {
+  color: rgb(255, 235, 150);
+}
+.text-gold-medium {
+  color: rgb(212, 169, 78);
+}
+.bg-gold-gradient {
+  background: linear-gradient(90deg, 
+    rgb(163, 123, 28), 
+    rgb(212, 169, 78), 
+    rgb(255, 235, 150), 
+    rgb(230, 190, 104), 
+    rgb(255, 215, 123), 
+    rgb(181, 143, 61)
+  );
+}
+.border-gold-custom {
+  border-color: rgb(163, 123, 28);
+}
+.hover-gold:hover {
+  color: rgb(255, 235, 150);
+}

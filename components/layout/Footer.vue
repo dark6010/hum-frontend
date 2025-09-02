@@ -1,10 +1,11 @@
 <template>
-    <footer class="bg-gray-800 text-white py-8">
+    <!-- <footer class="bg-navy-custom text-white py-8"> -->
+    <footer class="bg-navy-custom text-gold-light py-8">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 class="text-xl font-bold mb-4">{{ titulo1 }}</h3>
-            <p class="text-gray-300">{{ contenido1 }}</p>
+            <p class="text-gold-medium">{{ contenido1 }}</p>
           </div>
           
           <div>

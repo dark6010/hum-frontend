@@ -3,7 +3,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
   const { isAuthenticated, checkAuth } = useAuth()
   
   // 1. Definir rutas públicas que no requieren autenticación
-  const publicRoutes = ['/', '/register', '/auth-redirect']
+  const publicRoutes = ['/', '/dependencias', '/la-carrera', '/salidas-laterales', '/vida-estudiantil','/loginumss']
   
   // 2. Si es ruta pública, continuar sin verificar
   if (publicRoutes.includes(to.path)) {

@@ -5,8 +5,8 @@
       <a href="#" target="_blank" class="social-icon facebook">
         <FontAwesomeIcon :icon="['fab', 'facebook-f']" />
       </a>
-      <a href="#" target="_blank" class="social-icon twitter">
-        <FontAwesomeIcon :icon="['fab', 'twitter']" />
+      <a href="https://tiktok.com" target="_blank" class="social-icon bg-black">
+        <FontAwesomeIcon :icon="['fab', 'tiktok']" />
       </a>
       <a href="#" target="_blank" class="social-icon instagram">
         <FontAwesomeIcon :icon="['fab', 'instagram']" />

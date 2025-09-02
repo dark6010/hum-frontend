@@ -100,18 +100,18 @@ const modalidades = [
   },
   {
     id: 2,
-    nombre: 'Examen de Grado',
-    icon: 'mdi:book-education',
-    duracion: '1-3 meses',
-    descripcion: 'Evaluación integral de conocimientos mediante examen escrito y/o oral sobre las áreas fundamentales de la carrera.',
+    nombre: 'Proyecto de Grado',
+    icon: 'mdi:file-document-edit',
+    duracion: '6-12 meses',
+    descripcion: 'Investigación original sobre un tema educativo relevante, con rigor metodológico y contribución al campo disciplinar.',
     requisitos: [
-      'Promedio general mínimo de 75/100',
-      'Aprobar examen escrito eliminatorio',
-      'Sustentación oral ante tribunal',
-      'Portafolio de evidencias académicas'
+      'Aprobación del proyecto de tesis',
+      'Tutor asignado por la carrera',
+      'Defensa pública ante tribunal',
+      'Cumplir con normas APA y formato UMSS'
     ],
-    tags: ['Conocimientos', 'Individual', 'Evaluación escrita/oral'],
-    tipo: 'evaluacion'
+    tags: ['Investigación', 'Individual', 'Evaluación oral'],
+    tipo: 'practica'
   },
   {
     id: 3,
@@ -130,6 +130,51 @@ const modalidades = [
   },
   {
     id: 4,
+    nombre: 'Adscripcion',
+    icon: 'mdi:briefcase-account',
+    duracion: '4-8 meses',
+    descripcion: 'Intervención educativa en contexto real con diagnóstico, implementación y evaluación de propuesta pedagógica.',
+    requisitos: [
+      'Convenio con institución receptora',
+      'Informe técnico detallado',
+      'Evidencias de la intervención',
+      'Sustentación pública de resultados'
+    ],
+    tags: ['Práctica', 'Campo educativo', 'Aplicación'],
+    tipo: 'practica'
+  },
+  {
+    id: 5,
+    nombre: 'Examen de Grado',
+    icon: 'mdi:book-education',
+    duracion: '1-3 meses',
+    descripcion: 'Evaluación integral de conocimientos mediante examen escrito y/o oral sobre las áreas fundamentales de la carrera.',
+    requisitos: [
+      'Promedio general mínimo de 75/100',
+      'Aprobar examen escrito eliminatorio',
+      'Sustentación oral ante tribunal',
+      'Portafolio de evidencias académicas'
+    ],
+    tags: ['Conocimientos', 'Individual', 'Evaluación escrita/oral'],
+    tipo: 'evaluacion'
+  },
+  {
+    id: 6,
+    nombre: 'Internado',
+    icon: 'mdi:medal',
+    duracion: 'Directo',
+    descripcion: 'Titulación automática para estudiantes con destacado rendimiento académico durante toda la carrera.',
+    requisitos: [
+      'Promedio general ≥ 85/100',
+      'Haber culminado en tiempo reglamentario',
+      'No haber reprobado ninguna materia',
+      'Aprobar examen de suficiencia'
+    ],
+    tags: ['Mérito', 'Alto rendimiento', 'Automático'],
+    tipo: 'practica'
+  },
+  {
+    id: 7,
     nombre: 'Excelencia Académica',
     icon: 'mdi:medal',
     duracion: 'Directo',
@@ -141,16 +186,35 @@ const modalidades = [
       'Aprobar examen de suficiencia'
     ],
     tags: ['Mérito', 'Alto rendimiento', 'Automático'],
-    tipo: 'especial'
+    tipo: 'investigacion'
+  },
+  {
+    id: 8,
+    nombre: 'Diplomado',
+    icon: 'mdi:medal',
+    duracion: 'Directo',
+    descripcion: 'Titulación automática para estudiantes que aprueben un diplomado.',
+    requisitos: [
+      'Promedio general ≥ 85/100',
+      'Haber culminado en tiempo reglamentario',
+      'No haber reprobado ninguna materia',
+      'Aprobar examen de suficiencia'
+    ],
+    tags: ['Mérito', 'Alto rendimiento', 'Automático'],
+    tipo: 'investigacion'
   }
 ]
 
 const filters = [
   { value: 'todas', label: 'Todas' },
-  { value: 'investigacion', label: 'Investigación' },
-  { value: 'evaluacion', label: 'Evaluación' },
-  { value: 'practica', label: 'Práctica' },
-  { value: 'especial', label: 'Especiales' }
+  { value: 'investigacion', label: 'Tesis de grado' },
+  { value: 'evaluacion', label: 'Proyecto de grado' },
+  { value: 'practica', label: 'Trabajo dirigido' },
+  { value: 'especial', label: 'Adscripción' },
+  { value: 'evaluacion', label: 'Examen de grado' },
+  { value: 'practica', label: 'Internado' },
+  { value: 'buenas notas', label: 'Excelencia académica' },
+  { value: 'capacitacion', label: 'Diplomado' },
 ]
 
 const activeFilter = ref('todas')

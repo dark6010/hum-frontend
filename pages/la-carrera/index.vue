@@ -24,6 +24,9 @@ import CurriculumMap from '@/components/home/CurriculumMap.vue'
 import DegreeRequirements from '@/components/home/DegreeRequirements.vue'
 import GraduateProfile from '@/components/home/GraduateProfile.vue'
 import WelcomeMessage from '@/components/home/WelcomeMessage.vue'
+definePageMeta({
+  middleware: 'auth'
+})
 
 const store = useGlobalStore();
 

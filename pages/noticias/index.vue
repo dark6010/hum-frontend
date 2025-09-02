@@ -1,7 +1,6 @@
 <template>
   <div>
-    <!-- Mensaje de bienvenida -->
-    <SideExits />
+    <p>sera sector donde se subiran las noticias</p>
     
   </div>
 </template>
@@ -9,7 +8,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useGlobalStore } from '~/store/useGlobalStore';
-import SideExits from '@/components/home/SideExits.vue'
+import Contact from '@/components/home/Contact.vue'
 definePageMeta({
   middleware: 'auth'
 })
