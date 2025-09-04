@@ -2,7 +2,7 @@
   <section class="curriculum-map py-16 bg-white">
     <div class="container mx-auto px-4 max-w-7xl">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-blue-800 mb-3">Malla Curricular</h2>
+        <h2 class="text-3xl font-bold text-blue mb-3">Malla Curricular</h2>
         <p class="text-gray-600 max-w-3xl mx-auto">
           A continuación, se presenta la malla curricular, la misma que permitirá observar gráficamente las Unidades Pedagógicas de Formación, Áreas, Ejes Articuladores, Ciclos, Cursos y la titulación como Técnico Superior, las menciones profesionales, así como los recorridos académicos dispuestos para los estudiantes de Ciencias de la Educación
         </p>
@@ -17,7 +17,7 @@
             @click="activeView = option.value"
             class="px-4 py-2 rounded-md border transition"
             :class="{
-              'bg-navy-custom text-white border-blue-600': activeView === option.value,
+              'bg-navy-custom text-gold-light border-blue-600': activeView === option.value,
               'bg-white text-gray-700 border-gray-300 hover:bg-gray-50': activeView !== option.value
             }"
           >
@@ -78,7 +78,7 @@
               class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden"
             >
               <div class="bg-navy-custom px-4 py-3">
-                <h3 class="text-lg font-semibold text-white">
+                <h3 class="text-lg font-semibold text-gold-light">
                   Semestre {{ semester.number }}
                 </h3>
               </div>
@@ -109,7 +109,7 @@
         <a
           href="/curriculumMap/malla-curricular.pdf"
           download
-          class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-navy-custom-l text-gold-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -118,7 +118,7 @@
         </a>
         <button
           @click="printImage"
-          class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd" />

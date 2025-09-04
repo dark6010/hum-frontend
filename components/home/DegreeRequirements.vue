@@ -2,7 +2,7 @@
   <section class="graduation-options py-16 bg-gray-50">
     <div class="container mx-auto px-4 max-w-8xl">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-blue-800 mb-3">Modalidades de Titulación</h2>
+        <h2 class="text-3xl font-bold text-blue mb-3">Modalidades de Titulación</h2>
         <p class="text-gray-600 max-w-3xl mx-auto">
           Conoce las opciones para obtener tu título profesional en Ciencias de la Educación - UMSS
         </p>
@@ -16,7 +16,7 @@
           @click="activeFilter = filter.value"
           class="px-4 py-2 rounded-full text-sm font-medium transition-all"
           :class="{
-            'bg-blue-600 text-white': activeFilter === filter.value,
+            'bg-navy-custom-l text-gold-light': activeFilter === filter.value,
             'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50': activeFilter !== filter.value
           }"
         >

@@ -2,10 +2,18 @@
 .bg-navy-custom {
   background-color: rgb(34, 41, 65);
 }
+.bg-navy-custom-l {
+  background-color: rgb(34, 41, 65);
+  transition: all 0.3s ease !important;
+}
+.bg-navy-custom-l:hover {
+  background-color: rgb(38, 49, 74) !important;
+  transform: scale(1.05) !important;
+}
 .bg-navy-dark {
   background-color: rgb(26, 31, 49);
 }
-.bg-navy-light {
+.bg-navy-light{
   background-color: rgb(38, 49, 74);
 }
 .text-gold-light {
