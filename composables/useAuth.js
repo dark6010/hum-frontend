@@ -30,6 +30,7 @@ export const useAuth = () => {
       })
 
       if (error.value) {
+        isAuthenticated.value = false
         throw error.value
       }
 

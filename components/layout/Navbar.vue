@@ -14,7 +14,7 @@
         
         <div class="hidden md:flex space-x-6">
           <NuxtLink 
-            v-for="link in navLinks" 
+            v-for="link in filteredNavLinks" 
             :key="link.path" 
             :to="link.path"
             class="transition duration-300 relative group hover-gold"
@@ -38,14 +38,14 @@
       <!-- Mobile menu -->
       <div v-if="isOpen" class="md:hidden pb-4 mt-2 rounded-lg bg-navy-dark border border-gold-custom">
         <NuxtLink 
-          v-for="(link, index) in navLinks" 
+          v-for="(link, index) in filteredNavLinks" 
           :key="link.path" 
           :to="link.path"
           class="block py-3 px-4 transition duration-300 border-b border-gold-custom"
           :class="{
             'text-white bg-gold-custom font-semibold': route.path === link.path,
             'text-gray-200': route.path !== link.path,
-            'border-b-0': index === navLinks.length - 1
+            'border-b-0': index === filteredNavLinks.length - 1
           }"
           @click="isOpen = false"
         >
@@ -56,21 +56,39 @@
   </nav>
 </template>
   
-  <script setup>
-  import {Title} from '~/configs/navbar.js'
-  const title = ref(Title);
-  const isOpen = ref(false);
-  const route = useRoute();
-  onMounted(() => {
-    console.log('Ruta actual (cliente):', route.path);
+<script setup>
+import {Title} from '~/configs/navbar.js'
+
+const title = ref(Title);
+const isOpen = ref(false);
+const route = useRoute();
+
+// Usar el composable de autenticación
+const { isAuthenticated } = useAuth();
+
+// Definir todos los enlaces posibles
+const allNavLinks = [
+  { path: '/', label: 'Inicio' },
+  { path: '/la-carrera', label: 'La Carrera' },
+  { path: '/dependencias', label: 'Dependencias' },
+  { path: '/salidas-laterales', label: 'Salidas Laterales' },
+  { path: '/vida-estudiantil', label: 'Vida Estudiantil' },
+  { path: '/contacto', label: 'Contacto' },
+  { path: '/cpanel', label: 'Cpanel', requiresAuth: true } // Marcar que requiere autenticación
+];
+
+// Filtrar enlaces basado en autenticación
+const filteredNavLinks = computed(() => {
+  return allNavLinks.filter(link => {
+    // Si el enlace requiere autenticación y el usuario no está autenticado, no mostrarlo
+    if (link.requiresAuth && !isAuthenticated.value) {
+      return false;
+    }
+    return true;
   });
-  const navLinks = [
-    { path: '/', label: 'Inicio' },
-    { path: '/la-carrera', label: 'La Carrera' },
-    { path: '/dependencias', label: 'Dependencias' },
-    // { path: '/academia', label: 'Academia' },
-    { path: '/salidas-laterales', label: 'Salidas Laterales' },
-    { path: '/vida-estudiantil', label: 'Vida Estudiantil' },
-    { path: '/contacto', label: 'Contacto' }
-  ];
-  </script>
+});
+
+onMounted(() => {
+  console.log('Ruta actual (cliente):', route.path);
+});
+</script>

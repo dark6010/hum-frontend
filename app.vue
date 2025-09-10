@@ -58,7 +58,12 @@
 import { useGlobalStore } from '~/store/useGlobalStore';
 import Navbar from '@/components/layout/Navbar.vue'
 import Footer from '@/components/layout/Footer.vue'
+// app.vue o layout default.vue
+const { isAuthenticated, checkAuth } = useAuth();
 
+onMounted(async () => {
+  await checkAuth();
+});
 const store = useGlobalStore();
 </script>
 <style>
